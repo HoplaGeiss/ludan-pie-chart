@@ -17,7 +17,15 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "ngx-ludan-pie-chart": [
+        "dist/ngx-ludan-pie-chart"
+      ],
+      "ngx-ludan-pie-chart/*": [
+        "dist/ngx-ludan-pie-chart/*"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,

@@ -124,6 +124,41 @@
           }
         }
       }
+    },
+    "ngx-ludan-pie-chart": {
+      "projectType": "library",
+      "root": "projects/ngx-ludan-pie-chart",
+      "sourceRoot": "projects/ngx-ludan-pie-chart/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/ngx-ludan-pie-chart/tsconfig.lib.json",
+            "project": "projects/ngx-ludan-pie-chart/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ngx-ludan-pie-chart/src/test.ts",
+            "tsConfig": "projects/ngx-ludan-pie-chart/tsconfig.spec.json",
+            "karmaConfig": "projects/ngx-ludan-pie-chart/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ngx-ludan-pie-chart/tsconfig.lib.json",
+              "projects/ngx-ludan-pie-chart/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }},
   "defaultProject": "ludan-pie-chart"
 }
